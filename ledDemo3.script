@@ -1,0 +1,37 @@
+// Copyright (c) 2014 Mimetics Inc.
+// All Rights Reserved
+//
+// THIS SOFTWARE IS PROVIDED BY MIMETICS "AS IS" WITHOUT ANY EXPRESSED OR 
+// IMPLIED WARRANTIES.  IN NO CASE SHALL MIMETICS OR ANY CONTRIBUTORS BE
+// LIABLE IN ANY DAMAGES CAUSED BY THE USE OF THIS SOFTWARE.  
+//
+// FileName: ledDemo3.script
+// Version : 01.0
+//
+// Author  : myke predko
+//
+// Description: Demonstrate the different ways the Jade Robot Turns
+//
+// Release History:
+//  LEDDemo3 - Show the Bitmap and swirl the LEDs from 0 to 5 (Green)
+//           - This uses the renumbered LEDs of Main_29
+int                         i;
+str                         LEDString[6];
+
+
+//    syscall(setcursorstartx, "0");  syscall(setcursorstarty, "0");
+//    syscall(drawbitmap, "LED.b");
+
+    for (; "udlre" != syscall(getbutton, ""););
+
+    LEDString[0] = "0-f";
+    LEDString[1] = "1-f";
+    LEDString[2] = "2-f";
+    LEDString[3] = "3-f";
+    LEDString[4] = "4-f";
+    LEDString[5] = "5-f";
+
+    for (i = 0; "udlre" == syscall(getbutton, ""); i = (i + 1) % 6) {
+        syscall(delay, "100");
+        syscall(setled, LEDString[i]);
+    }

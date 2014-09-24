@@ -1,3 +1,18 @@
+// Copyright (c) 2014 Mimetics Inc.
+// All Rights Reserved
+//
+// THIS SOFTWARE IS PROVIDED BY MIMETICS "AS IS" WITHOUT ANY EXPRESSED OR 
+// IMPLIED WARRANTIES.  IN NO CASE SHALL MIMETICS OR ANY CONTRIBUTORS BE
+// LIABLE IN ANY DAMAGES CAUSED BY THE USE OF THIS SOFTWARE.  
+//
+// FileName: ledDemo3.script
+// Version : 01.0
+//
+// Author  : myke predko
+//
+// Description: Demonstrate the different ways the Jade Robot Turns
+//
+// Release History:
 //  LEDDemo3 - Show the Bitmap and swirl the LEDs from 0 to 5 (Green)
 //           - This uses the renumbered LEDs of Main_29
 int                         i;
